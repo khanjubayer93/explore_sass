@@ -19,6 +19,12 @@
     }
 }
 
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content ;
+    }
+}
+
 
 body {
     background: $primary-color;
@@ -28,18 +34,30 @@ body {
 
 .main {
     @include flexCenter(row);
-    width: 80%;
+    width: calc(40% - 80%);
     margin: 0 auto;
 
-    #{&}__paragraph {
+    #{&}__paragraph1 {
         font-weight: weight(bold);
 
         &:hover {
             color: rgb(251, 105, 57)
         }
     }
+
+    #{&}__paragraph2 {
+        @extend .main__paragraph1;
+
+        &:hover {
+            color: blueviolet;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
 }
 
-.light{
-    @include theme($light-theme: false)
+.light {
+    @include theme($light-theme: true)
 }
