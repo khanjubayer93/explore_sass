@@ -1,3 +1,5 @@
+@import 'mixin';
+
 $headline-bgcolor: #a6a7b4;
 $primary-margin: 20px;
 $primary-padding: 20px;
@@ -12,6 +14,29 @@ h1 {
     margin: $primary-margin;
     padding: $primary-padding;
     border-radius: $primary-border-radius;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 25px;
+    color: rgb(1, 203, 1);
+    border: solid;
+    cursor: pointer;
+
+}
+
+.btn-download {
+    @extend .btn;
+}
+
+.btn-readmore {
+    @extend .btn;
+    color: rgb(161, 0, 0);
 }
 
 p {
@@ -22,29 +47,13 @@ p {
     color: $primary-text-color;
 }
 
-@mixin a-element-styls {
-    text-decoration: none;
-    background-color: aqua;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-@mixin a-element-hover-style {
-    background: rgb(0, 121, 169);
-    color: white;
-    font-weight: 700;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
 nav {
     margin-top: 20px;
     margin-bottom: 20px;
 
     ul {
         list-style-type: none;
-        background: red;
+        // background: red;
 
         li {
             display: inline-block;

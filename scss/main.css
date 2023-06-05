@@ -4,6 +4,23 @@ h1 {
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn, .btn-readmore, .btn-download {
+  padding: 10px 15px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 25px;
+  color: rgb(1, 203, 1);
+  border: solid;
+  cursor: pointer;
+}
+
+.btn-readmore {
+  color: rgb(161, 0, 0);
 }
 
 p {
@@ -20,7 +37,6 @@ nav {
 }
 nav ul {
   list-style-type: none;
-  background: red;
 }
 nav ul li {
   display: inline-block;
@@ -33,7 +49,7 @@ nav ul li a {
   font-size: 20px;
 }
 nav ul li a:hover {
-  background: rgb(0, 121, 169);
+  background: rgb(169, 37, 0);
   color: white;
   font-weight: 700;
   font-size: 20px;
