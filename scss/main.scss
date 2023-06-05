@@ -1,63 +1,23 @@
-@import './resets';
-@import './variables';
+$headline-bgcolor: #a6a7b4;
+$primary-margin: 20px;
+$primary-padding: 20px;
+$primary-border-radius: 10px;
+$secondery-bgcolor: #d23e43;
+$primary-text-color: green;
 
-@function weight($weight-name) {
-    @return map-get($font-weights , $weight-name );
+h1 {
+    $primary-text-color: yellow !global;
+    color: $primary-text-color;
+    background: $headline-bgcolor;
+    margin: $primary-margin;
+    padding: $primary-padding;
+    border-radius: $primary-border-radius;
 }
 
-@mixin flexCenter($direction) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-}
-
-@mixin theme($light-theme: true) {
-    @if $light-theme {
-        background: lighten($primary-color, 100%);
-        color: darken($text-color , 100%);
-    }
-}
-
-@mixin mobile {
-    @media (max-width: $mobile) {
-        @content ;
-    }
-}
-
-
-body {
-    background: $primary-color;
-    color: $text-color;
-
-}
-
-.main {
-    @include flexCenter(row);
-    width: calc(40% - 80%);
-    margin: 0 auto;
-
-    #{&}__paragraph1 {
-        font-weight: weight(bold);
-
-        &:hover {
-            color: rgb(251, 105, 57)
-        }
-    }
-
-    #{&}__paragraph2 {
-        @extend .main__paragraph1;
-
-        &:hover {
-            color: blueviolet;
-        }
-    }
-
-    @include mobile {
-        flex-direction: column;
-    }
-}
-
-.light {
-    @include theme($light-theme: true)
+p {
+    background: $secondery-bgcolor;
+    margin: $primary-margin;
+    padding: $primary-padding;
+    border-radius: $primary-border-radius;
+    color: $primary-text-color;
 }
