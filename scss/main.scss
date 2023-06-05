@@ -22,25 +22,40 @@ p {
     color: $primary-text-color;
 }
 
+@mixin a-element-styls {
+    text-decoration: none;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+@mixin a-element-hover-style {
+    background: rgb(0, 121, 169);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 nav {
     margin-top: 20px;
     margin-bottom: 20px;
-}
 
-nav ul {
-    list-style-type: none;
-}
+    ul {
+        list-style-type: none;
+        background: red;
 
-nav ul li {
-    display: inline-block;
-    padding: 5px, 10px, 5px, 10px;
+        li {
+            display: inline-block;
 
-}
+            a {
+                @include a-element-styls;
+            }
 
-nav ul li a {
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background: rgb(0, 182, 254);
+            a:hover {
+                @include a-element-hover-style();
+            }
+        }
+    }
 }

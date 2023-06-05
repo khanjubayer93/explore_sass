@@ -17,17 +17,25 @@ p {
 nav {
   margin-top: 20px;
   margin-bottom: 20px;
-  justify-content: center;
 }
-
 nav ul {
   list-style-type: none;
+  background: red;
 }
-
 nav ul li {
   display: inline-block;
 }
-
 nav ul li a {
   text-decoration: none;
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+nav ul li a:hover {
+  background: rgb(0, 121, 169);
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }/*# sourceMappingURL=main.css.map */
